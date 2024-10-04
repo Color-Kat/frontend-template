@@ -1,0 +1,90 @@
+.bottom-navigation {
+    position: relative;
+    width: 100%;
+    min-height: 79px;
+
+    .bg-rectangle {
+        height: 79px;
+        width: 100%;
+        border-radius: 26px 26px 0 0;
+
+        background: linear-gradient(to right, #3C397E, #0A0A1B);
+        clip-path: url('#bottom-navigation-clip-path');
+        //clip-path: path("M101.756 99.2535C114.436 102.13 126.861 107.509 139.864 107.509H351.289C365.489 107.509 377 119.02 377 133.22V151C377 170.882 360.882 187 341 187H46C26.1177 187 10 170.882 10 151V133.22C10 119.02 21.5112 107.509 35.711 107.509H41.0987C54.1014 107.509 66.5264 102.13 79.2069 99.2535C82.8166 98.4347 86.5932 98 90.4813 98C94.3694 98 98.146 98.4347 101.756 99.2535Z");
+        //background-color: transparent;
+
+    }
+}
+
+.bottom-navigation-bg {
+    background: linear-gradient(90deg, #3C397E 0%, #0A0A1B 100%);
+}
+
+$bubble-offset: 6px;
+
+.siri-bubble {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+        position: absolute;
+        inset: 0;
+        opacity: .9;
+
+        &:nth-child(1) {
+            z-index: 3;
+            transform-origin: calc(50% + 0 * 0.5 * $bubble-offset) calc(50% + 1 * $bubble-offset);
+            animation: bubble_1_spin 7.5s ease-in-out infinite;
+        }
+
+        &:nth-child(2) {
+            z-index: 1;
+            transform-origin: calc(50% - 0.86 * $bubble-offset) calc(50% - 0.5 * $bubble-offset);
+            animation: bubble_2_spin 7.7s ease-in-out infinite;
+        }
+
+        &:nth-child(3) {
+            z-index: 2;
+            transform-origin: calc(50% + 0.86 * $bubble-offset) calc(50% - 0.5 * $bubble-offset);
+            animation: bubble_3_spin 8s ease-in-out infinite;
+        }
+
+        // Central circle
+        &:nth-child(4) {
+            z-index: 4;
+            opacity: 1;
+        }
+    }
+
+
+}
+
+@keyframes bubble_1_spin {
+    0% {
+        transform: translateX(0) translateY(-1 * $bubble-offset) rotate(0deg);
+    }
+    100% {
+        transform: translateX(0) translateY(-1 * $bubble-offset) rotate(360deg);
+    }
+}
+
+@keyframes bubble_2_spin {
+    0% {
+        transform: translateX(3.5px) translateY(0.5 * $bubble-offset) rotate(0deg);
+    }
+    100% {
+        transform: translateX(3.5px) translateY(0.5 * $bubble-offset) rotate(360deg);
+    }
+}
+
+@keyframes bubble_3_spin {
+    0% {
+        transform: translateX(-3.5px) translateY(0.5 * $bubble-offset) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-3.5px) translateY(0.5 * $bubble-offset) rotate(360deg);
+    }
+}
+
