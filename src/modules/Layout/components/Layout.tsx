@@ -19,7 +19,7 @@ export const Layout: React.FC<{ children: React.ReactElement }> = memo(({childre
 
                     // "md:h-screen h-[calc(100vh-4.4rem)]", // For MobileBottomMenu
                     // "pt-16",// For header
-                    // "pb-[4.4rem] md:pb-0",// For MobileBottomMenu
+                    // "pb-[4.4rem] md:pb-0",// For MobileBottomMenu 1
                     "bg-app-dark font-inter text-white"
                 )}
             >
@@ -35,7 +35,7 @@ export const Layout: React.FC<{ children: React.ReactElement }> = memo(({childre
                 <Header/>
 
                 <div
-                    className="scroll-container overflow-y-auto overflow-x-hidden flex flex-col flex-auto"
+                    className="scroll-container overflow-y-auto overflow-x-hidden flex flex-col flex-auto mb-20"
                 >
                     <Main>
                         {children}

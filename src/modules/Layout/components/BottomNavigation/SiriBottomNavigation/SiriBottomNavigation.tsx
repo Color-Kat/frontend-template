@@ -27,6 +27,7 @@ export const Bubble: FC<{ offsetClass: string }> = memo(({ offsetClass }) => {
 
     return (
         <div
+            id="siri-bottom-navigation"
             className={twJoin(
                 "",
                 "bg-[#373576] border-4 border-app-dark",
