@@ -7,6 +7,7 @@ import {Col1} from "./modules/Col1.tsx";
 import {Col2} from "./modules/Col2.tsx";
 import {Col3} from "./modules/Col3.tsx";
 import {Col4} from "./modules/Col4.tsx";
+import { Col5 } from "@pages/TestPage/modules/Col5.tsx";
 
 export const TestPage = () => {
 
@@ -48,6 +49,8 @@ export const TestPage = () => {
                     <Col3 />
 
                     <Col4 />
+
+                    <Col5 />
                 </div>
 
 

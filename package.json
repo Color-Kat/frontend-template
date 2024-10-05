@@ -13,6 +13,7 @@
     "@fullpage/react-fullpage": "^0.1.44",
     "@headlessui/react": "^2.1.9",
     "gsap": "^3.12.5",
+    "immer": "^10.1.1",
     "react": "^18.3.1",
     "react-calendar": "^5.0.0",
     "react-dom": "^18.3.1",
@@ -21,7 +22,8 @@
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.26.2",
     "swiper": "^11.1.14",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
